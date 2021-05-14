@@ -12,6 +12,9 @@ public class aula1 {
 		p1.setIdade(30);
 		System.out.println(p.getNome()+" tem idade de "+p.getIdade());
 		System.out.println(p1.getNome()+" tem idade de "+p1.getIdade());
+		
+		p.setNome("Pedro");
+		System.out.println(p.toString());
 	}
 
 }

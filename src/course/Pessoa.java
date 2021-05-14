@@ -4,6 +4,7 @@ public class Pessoa {
 	private String nome;
 	private int idade;
 	private String sexo;
+	public PersonStatus status;
 
 	public Pessoa(String nome, int idade, String sexo) {
 		this.nome = nome;
@@ -11,12 +12,20 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 
+	public enum PersonStatus {
+		PENDING_PAYMENT,
+		PROCESSING,
+		SHIPPED,
+		DELIVERED
+	}
+	
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
+		this.status = PersonStatus.DELIVERED;
 	}
 
 	public int getIdade() {
@@ -37,7 +46,7 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + "]";
+		return "Pessoa [nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + " status= "+status+"]";
 	}
 	
 	
