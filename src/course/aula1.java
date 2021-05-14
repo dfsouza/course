@@ -8,7 +8,10 @@ public class aula1 {
 		
 		System.out.println(p.toString());
 		System.out.println(p1.toString());
-
+		p.setIdade(25);
+		p1.setIdade(30);
+		System.out.println(p.getNome()+" tem idade de "+p.getIdade());
+		System.out.println(p1.getNome()+" tem idade de "+p1.getIdade());
 	}
 
 }
